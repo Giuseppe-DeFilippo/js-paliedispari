@@ -24,4 +24,5 @@ function parola(){
 }
 parola();
 
+
 // perchè nell if non andava il  .reverse
