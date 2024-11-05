@@ -11,9 +11,10 @@ Dichiariamo chi ha vinto.*/
 
 
 console.clear()
-let word = prompt("inserisci la parola");
-let wordreverse = word.split("").reverse().join("");
-function parola(word, wordreverse){
+
+function parola(){
+    let word = prompt("inserisci la parola");
+    let wordreverse = word.split("").reverse().join("");
     if (word === wordreverse){
         console.log("è una parola palindroma");
     }
@@ -21,5 +22,6 @@ function parola(word, wordreverse){
         console.log("non è una parola palindroma");
     }
 }
-parola(word, wordreverse);
+parola();
+
 // perchè nell if non andava il  .reverse
