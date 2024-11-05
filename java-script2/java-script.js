@@ -8,21 +8,44 @@ Dichiariamo chi ha vinto.*/
 console.clear();
     const pd = prompt("pari o dispari?");
     const number = parseInt(prompt("inserisci numero da 1 a 5"));
+    const nRandom = random();
+    
     console.log(pd);
     console.log(number);
+    console.log(nRandom);
+    winner(number, nRandom,pd);
 
 function random(){
-const computer = Math.floor(Math.random() * 6);
-console.log(computer);
+    const computer = Math.floor(Math.random() * 6);
+    return computer;
 }
 
-//function paridispari(){
-    
-//}
+
 //questa funzione serve per somamre i 2 numeri e vedere se sono pari e dispari 
-function winner(){
+function winner(number, nRandom,pd){
+    // faccio la somma qui
+    let somma = (number + nRandom);
+    console.log(somma);
+
+    // qua faccio il controllo pari o dispari
+    let pod = null;
+    if(somma %2 === 0 ){
+        console.log("è pari");
+        pod="pari";
+    } else{
+        console.log("è dispari");
+        pod="dispari";
+    }
+
+    if(pd === "pari"  && pod === "pari"){
+         console.log("l utente ha vinto");
+    }else if(pd === "dispari" && pod ==="dispari" ){
+         console.log("l utente ha vinto");
+    }else{
+        console.log("il computer ha vinto");
+    }
 
 }
 
-//paridispari();
-random(); 
+
+
