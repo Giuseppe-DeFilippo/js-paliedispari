@@ -12,7 +12,7 @@ Dichiariamo chi ha vinto.*/
 
 console.clear()
 
-function parola(){
+    function parola(){
     let word = prompt("inserisci la parola");
     let wordreverse = word.split("").reverse().join("");
     if (word === wordreverse){
